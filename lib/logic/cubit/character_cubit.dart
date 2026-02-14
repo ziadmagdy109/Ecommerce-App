@@ -6,8 +6,7 @@ import 'package:meta/meta.dart';
 part 'character_state.dart';
 
 class CharacterCubit extends Cubit<CharacterState> {
-  CharacterCubit({required this.characterRepository})
-    : super(CharacterInitial());
+  CharacterCubit(this.characterRepository) : super(CharacterInitial());
   final CharacterRepository characterRepository;
   List<CharacterModel> characters = [];
   List<CharacterModel> getAllCharacters() {

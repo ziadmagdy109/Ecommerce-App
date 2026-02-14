@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/config/app_router.dart';
+import 'package:ecommerce_app/config/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,9 +7,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routerConfig: appRouter,
+      initialRoute:AppRoutes.home,
+       onGenerateRoute: AppRouter().generateRoute,
     );
   }
 }
